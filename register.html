@@ -1,0 +1,73 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+
+<body bgcolor="black" text="white">
+
+<center>
+
+    <h1>Registro</h1>
+
+    <form onsubmit="registrar(); return false;">
+
+        <label for="usuario">Nombre de usuario:</label><br>
+        <input type="text" id="usuario" name="usuario"
+               placeholder="Ingrese su nombre de usuario" required>
+
+        <br><br>
+
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre"
+               placeholder="Ingrese su nombre" required>
+
+        <br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad"
+               placeholder="Ingrese su edad" required>
+
+        <br><br>
+
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo"
+               placeholder="Ingrese su correo" required>
+
+        <br><br>
+
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password"
+               placeholder="Ingrese su contraseña" required>
+
+        <br><br>
+
+        <button type="submit">Registrarse</button>
+
+    </form>
+
+    <p>
+        ¿Ya tienes cuenta?
+        <a href="login.html">Inicia sesión</a>
+    </p>
+
+</center>
+
+<script>
+
+function registrar() {
+
+    alert("Registro realizado correctamente");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+</body>
+</html>
+```

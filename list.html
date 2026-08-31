@@ -1,0 +1,86 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h1 {
+            color: #008cff;
+            margin-top: 40px;
+        }
+
+        table {
+            margin: 40px auto;
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        th {
+            background-color: #008cff;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            background-color: #111827;
+            border: 1px solid #008cff;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Lista de Usuarios</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+
+        <tbody id="listaUsuarios">
+        </tbody>
+
+    </table>
+
+    <script>
+
+        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        let lista = document.getElementById("listaUsuarios");
+
+        usuarios.forEach(function(usuario) {
+
+            let fila = document.createElement("tr");
+
+            fila.innerHTML = `
+                <td>${usuario.id}</td>
+                <td>${usuario.nombre}</td>
+                <td>${usuario.correo}</td>
+                <td>${usuario.edad}</td>
+            `;
+
+            lista.appendChild(fila);
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
